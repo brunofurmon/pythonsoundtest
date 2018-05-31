@@ -1,3 +1,5 @@
+#author: brunofurmon (github.com/brunofurmon)
+
 import math
 
 

@@ -1,3 +1,5 @@
+#author: brunofurmon (github.com/brunofurmon)
+
 import math  # import needed modules
 
 from pyaudiowrapper import PyAudioWrapper
@@ -31,9 +33,7 @@ F4_1 = Notes.F(4, .25, bitrate)
 F4_8 = Notes.F(4, 2, bitrate)
 
 F6_1_12 = Notes.F(6, .25/3, bitrate)
-
-silence1 = Notes.silence(0.5, bitrate)
-silence2 = Notes.silence(0.25, bitrate)
+silence_1_12 = Notes.silence(.25/3, bitrate)
 
 # Let the madness commence
 with PyAudioWrapper(channels, bitrate, True) as paudio:
@@ -54,8 +54,9 @@ with PyAudioWrapper(channels, bitrate, True) as paudio:
     paudio.writeData(F4_8)
 
     # blblbl
-    for _ in range(12):
+    for _ in range(11):
         paudio.writeData(F6_1_12)
+    paudio.writeData(silence_1_12)
 
     paudio.writeData(C5_1)
     paudio.writeData(Bb4_1)

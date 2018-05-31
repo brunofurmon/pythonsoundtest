@@ -1,3 +1,5 @@
+#author: brunofurmon (github.com/brunofurmon)
+
 import pyaudio  # sudo apt-get install python-pyaudio
 
 
